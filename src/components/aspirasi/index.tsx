@@ -29,6 +29,12 @@ type ImagePreview = {
   preview: string | ArrayBuffer | null;
 };
 
+interface District {
+  id: number;
+  name: string;
+  full_code: string;
+}
+
 export default function AspirasiComponent() {
   const router = useRouter();
   const user = useAuthStore((state) => state.user);
@@ -47,8 +53,8 @@ export default function AspirasiComponent() {
   const [listDapil, setListDapil] = useState<Dapil>();
   const [categoryAspirasi, setCategoryAspirasi] = useState<Dapil>();
   const [listAnggota, setListAnggota] = useState<Anggota>();
-  const [listDistricts, setListDistricts] = useState([]);
-  const [listVillages, setListVillages] = useState([]);
+  const [listDistricts, setListDistricts] = useState<District[]>([]);
+  const [listVillages, setListVillages] = useState<District[]>([]);
   const [imageFiles, setImageFiles] = useState<File[]>([]);
   const [imagePreviews, setImagePreviews] = useState<ImagePreview[]>([]);
   const [documentFiles, setDocumentFiles] = useState<File[]>([]);
