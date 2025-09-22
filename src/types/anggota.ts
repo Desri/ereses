@@ -17,9 +17,10 @@ export type AnggotaDetail = {
   age: string;
   position: any;
   userCurentAkd: any;
-  gender: string
+  userCurrentAkd: any;
+  gender: string;
 };
-  
+
 export type Anggota = {
   items: AnggotaDetail[];
-}
+};
