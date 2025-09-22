@@ -235,7 +235,7 @@ export default function LeafletMap({ className }: MapProps) {
                 <div
                   className="text-white px-2 py-1 rounded-t text-xs font-bold"
                   style={{
-                    backgroundColor: polygon.labelColor || polygon.color,
+                    backgroundColor: (polygon as any).labelColor || polygon.color,
                   }}
                 >
                   {polygon.name}
