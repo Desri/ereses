@@ -421,9 +421,9 @@ export default function AspirasiComponent() {
                       </option>
                     ))}
                   </select>
-                  {errors.kelurahan && (
+                  {errors.village && (
                     <p className="text-red-500 text-xs mt-1.5">
-                      {errors.kelurahan.message}
+                      {errors.village.message}
                     </p>
                   )}
                 </div>
