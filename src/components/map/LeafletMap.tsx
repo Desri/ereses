@@ -303,7 +303,7 @@ export default function LeafletMap({ className }: MapProps) {
                     </div>
                     <div className="bg-white border border-gray-200 px-3 py-2 rounded text-center">
                       <div className="text-gray-700 font-semibold text-sm">
-                        {item.total || item.kecamatan?.length || 0} Anggota
+                        {item.kecamatan?.length || 0} Anggota
                       </div>
                     </div>
                     <div className="mt-2 text-xs text-gray-600">
