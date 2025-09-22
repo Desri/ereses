@@ -121,7 +121,7 @@ export default function HomePageComponent() {
           <div className="pt-6">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6">
               {news?.items?.map((item, idx) =>
-                item.slug != null ? (
+                item.id != null ? (
                   <CardNewsComponent
                     key={idx}
                     title={item.title}

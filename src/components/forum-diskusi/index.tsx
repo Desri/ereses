@@ -83,10 +83,10 @@ export default function ForumDiskusiComponent({ slug }: { slug?: string }) {
                   </td>
                   <td className="px-1.5 pb-3">:</td>
                   <td className="pb-3">
-                    {detailAnggota?.userCurentAkd[0].termStart} -{" "}
-                    {detailAnggota?.userCurentAkd[0].termEnd === null
+                    {detailAnggota?.userCurrentAkd[0].termStart} -{" "}
+                    {detailAnggota?.userCurrentAkd[0].termEnd === null
                       ? "Sekarang"
-                      : detailAnggota?.userCurentAkd[0].termEnd}
+                      : detailAnggota?.userCurrentAkd[0].termEnd}
                   </td>
                 </tr>
                 <tr>
