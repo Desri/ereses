@@ -396,9 +396,9 @@ export default function AspirasiComponent() {
                       </option>
                     ))}
                   </select>
-                  {errors.kecamatan && (
+                  {errors.subDistrict && (
                     <p className="text-red-500 text-xs mt-1.5">
-                      {errors.kecamatan.message}
+                      {errors.subDistrict.message}
                     </p>
                   )}
                 </div>
