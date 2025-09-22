@@ -49,7 +49,7 @@ export default function AspirasiComponent() {
   const [listAnggota, setListAnggota] = useState<Anggota>();
   const [listDistricts, setListDistricts] = useState([]);
   const [listVillages, setListVillages] = useState([]);
-  const [imageFiles, setImageFiles] = useState([]);
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
   const [imagePreviews, setImagePreviews] = useState<ImagePreview[]>([]);
   const [documentFiles, setDocumentFiles] = useState([]);
   const [kelurahan, setKelurahan] = useState("");
