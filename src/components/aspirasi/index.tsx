@@ -196,7 +196,7 @@ export default function AspirasiComponent() {
   };
 
   const handleDocumentUpload = (event: any) => {
-    const files = Array.from(event.target.files);
+    const files = Array.from(event.target.files) as File[];
     if (!files.length) return;
 
     const validFiles: File[] = [];
