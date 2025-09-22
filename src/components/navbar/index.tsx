@@ -126,6 +126,20 @@ export default function NavigationBar() {
                             Notifikasi
                           </Link>
                           <Link
+                            href="/riwayat-aspirasi"
+                            className="flex items-center hover:bg-gray-100 px-4 py-2 gap-x-3 text-sm text-gray-700"
+                          >
+                            <span className="text-gray-500">
+                              <Image
+                                src="/assets/notepad_icon.png"
+                                width={28}
+                                height={28}
+                                alt="profile"
+                              />
+                            </span>{" "}
+                            Riwayat Aspirasi
+                          </Link>
+                          <Link
                             href="/aktivitas"
                             className="flex items-center hover:bg-gray-100 px-4 py-2 gap-x-3 text-sm text-gray-700"
                           >

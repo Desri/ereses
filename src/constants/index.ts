@@ -42,6 +42,7 @@ export const api = {
     add: "api/master/category-aspiration",
     delete: "api/master/category-aspiration",
     list: "api/master/category-aspiration",
+    history: "api/aspiration/user",
   },
   report: {
     url: "api/report",

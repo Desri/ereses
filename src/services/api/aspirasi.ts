@@ -40,7 +40,7 @@ export const getAspirasi = async (params?: {
       dapilId = "",
       startDate = "",
       endDate = "",
-      search = ""
+      search = "",
     } = params || {};
 
     // Build query string dynamically
@@ -51,7 +51,7 @@ export const getAspirasi = async (params?: {
       ...(dapilId && { dapilId }),
       ...(startDate && { startDate }),
       ...(endDate && { endDate }),
-      ...(search && { search })
+      ...(search && { search }),
     });
 
     const response = await fetch(
@@ -154,13 +154,16 @@ export const deleteKategoriAspirasi = async ({ id }: { id: number }) => {
 
 export const getDetailRegion = async ({ id }: { id: any }) => {
   try {
-    const response = await fetch(`https://indoregion.newus.id/region/regency/code/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://indoregion.newus.id/region/regency/code/${id}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch");
     }
@@ -173,13 +176,16 @@ export const getDetailRegion = async ({ id }: { id: any }) => {
 
 export const getDetailDistrict = async ({ id }: { id: any }) => {
   try {
-    const response = await fetch(`https://indoregion.newus.id/region/district/code/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://indoregion.newus.id/region/district/code/${id}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch");
     }
@@ -192,13 +198,16 @@ export const getDetailDistrict = async ({ id }: { id: any }) => {
 
 export const getDetailDistricts = async () => {
   try {
-    const response = await fetch(`https://indoregion.newus.id/region/districts/code/1612`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://indoregion.newus.id/region/districts/code/1612`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch");
     }
@@ -211,13 +220,16 @@ export const getDetailDistricts = async () => {
 
 export const getDetailVillage = async ({ id }: { id: any }) => {
   try {
-    const response = await fetch(`https://indoregion.newus.id/region/village/code/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://indoregion.newus.id/region/village/code/${id}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch");
     }
@@ -230,13 +242,16 @@ export const getDetailVillage = async ({ id }: { id: any }) => {
 
 export const getDetailVillages = async ({ id }: { id: any }) => {
   try {
-    const response = await fetch(`https://indoregion.newus.id/region/villages/code/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://indoregion.newus.id/region/villages/code/${id}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch");
     }
@@ -262,7 +277,7 @@ export const getVerifiedAspirasi = async (params?: {
       dapilId = "",
       startDate = "",
       endDate = "",
-      search = ""
+      search = "",
     } = params || {};
 
     // Build query string dynamically
@@ -272,7 +287,7 @@ export const getVerifiedAspirasi = async (params?: {
       ...(dapilId && { dapilId }),
       ...(startDate && { startDate }),
       ...(endDate && { endDate }),
-      ...(search && { search })
+      ...(search && { search }),
     });
 
     const response = await fetch(
@@ -295,3 +310,21 @@ export const getVerifiedAspirasi = async (params?: {
   }
 };
 
+export const getAspirasiHistory = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/${api.aspirasi.history}/all?`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};

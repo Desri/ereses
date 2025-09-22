@@ -233,39 +233,51 @@ export default function ProfileAnggotaDprdComponent({
             <div className="grid grid-cols-2 mt-8">
               <div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Fraksi</label>
+                  <label htmlFor="fraksi" className="text-[#857878]">
+                    Fraksi
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">
                     {detailAnggota?.fraksi.name}
                   </h3>
                 </div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Komisi</label>
+                  <label htmlFor="komisi" className="text-[#857878]">
+                    Komisi
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">
                     {detailAnggota?.komisi || "-"}
                   </h3>
                 </div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Masa Jabatan</label>
+                  <label htmlFor="masaJabatan" className="text-[#857878]">
+                    Masa Jabatan
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">
-                    {detailAnggota?.userCurentAkd[0].period.startYear} -{" "}
-                    {detailAnggota?.userCurentAkd[0].period.endYear ??
+                    {detailAnggota?.userCurrentAkd[0].period.startYear} -{" "}
+                    {detailAnggota?.userCurrentAkd[0].period.endYear ??
                       "Sekarang"}
                   </h3>
                 </div>
               </div>
               <div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Dapil</label>
+                  <label htmlFor="dapil" className="text-[#857878]">
+                    Dapil
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">
                     {detailAnggota?.dapil.name}
                   </h3>
                 </div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Unit Kerja/ODP</label>
+                  <label htmlFor="odp" className="text-[#857878]">
+                    Unit Kerja/ODP
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">-</h3>
                 </div>
                 <div className="mb-5">
-                  <label className="text-[#857878]">Golongan/Pangkat</label>
+                  <label htmlFor="pangkat" className="text-[#857878]">
+                    Golongan/Pangkat
+                  </label>
                   <h3 className="font-bold mt-1 text-[#473D3D]">
                     {detailAnggota?.position.name}
                   </h3>
