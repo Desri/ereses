@@ -173,11 +173,13 @@ export default function AspirasiComponent() {
       // Create preview
       const reader = new FileReader();
       reader.onload = (e) => {
-        validPreviews.push({
-          id: Date.now() + Math.random(),
-          file: file,
-          preview: e.target.result,
-        });
+        if (e.target) {
+          validPreviews.push({
+            id: Date.now() + Math.random(),
+            file: file,
+            preview: e.target.result,
+          });
+        }
 
         // Update previews when all files are processed
         if (validPreviews.length === validFiles.length) {
