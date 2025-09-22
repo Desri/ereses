@@ -13,8 +13,18 @@ import "./style.css";
 import FilterActivitasComponent from "./filter";
 import { formatDateID } from "@/utils/formatDate";
 
+interface AktivitasItem {
+  date: string;
+  time: string;
+  description: string;
+}
+
+interface AktivitasData {
+  items: AktivitasItem[];
+}
+
 export default function AktivitasComponent() {
-  const [aktifitas, setAktifitas] = useState();
+  const [aktifitas, setAktifitas] = useState<AktivitasData | null>(null);
 
   useEffect(() => {
     fetchListNews();
