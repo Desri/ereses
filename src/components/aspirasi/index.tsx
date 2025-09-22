@@ -205,7 +205,6 @@ export default function AspirasiComponent() {
     files.forEach((file) => {
       const error = validateFile(file, "document");
       if (error) {
-        console.error(`Error with file ${file.name}: ${error}`);
         hasError = true;
         return;
       }
