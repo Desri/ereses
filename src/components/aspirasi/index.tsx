@@ -592,7 +592,7 @@ export default function AspirasiComponent() {
                             className="mt-2 relative border-2 border-solid border-[#dddddd] rounded-[6px] h-[95px] w-[95px] bg-white overflow-hidden"
                           >
                             <img
-                              src={preview.preview}
+                              src={preview.preview as string}
                               alt={`Preview ${index + 1}`}
                               className="w-full h-full object-cover"
                             />
