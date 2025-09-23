@@ -5,9 +5,10 @@ export type NewsDetail = {
   date: string;
   categoryArticle: any;
   description: string;
-  imageUrl: any
+  imageUrl: any;
+  slug: any;
 };
-  
+
 export type News = {
   items: NewsDetail[];
-}
+};
